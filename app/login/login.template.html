@@ -1,0 +1,16 @@
+<h1>Login</h1>
+
+<form name="log.form" ng-submit="log.login()">
+  <p ng-if="log.invalidGrant" class="text text-danger">Invalid credentials</p>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" ng-model="log.user.username"
+           id="email" placeholder="Email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" ng-model="log.user.password"
+           id="password" placeholder="Password" name="password" required>
+  </div>
+  <button type="submit" class="btn btn-default" ng-disabled="log.form.$invalid">Login</button>
+</form>

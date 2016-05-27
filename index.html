@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="my-app">
+<head>
+  <meta charset="UTF-8">
+  <title>OAuth Client AngularJS Demo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+  </script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li><a href="/#/register">Register</a></li>
+      <li><a href="/#/login">Login</a></li>
+      <li><a href="/#/logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div ng-view></div>
+</div>
+</body>
+</html>
